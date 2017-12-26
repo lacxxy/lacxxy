@@ -1,0 +1,104 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>todolist</title>
+    <link href="4.css" rel="stylesheet" type="text/css">
+  </head>
+<body>
+  <div >
+    <div1 >
+        <h1>一个简单的事件管理界面</h1>
+          <p>请输入您想添加的事件：</p>
+          <textarea id="事件"></textarea><button id="button事件"  onclick="buttonshijian()">确定</button>
+          <br/></br></br>
+          <p>请输入时间小时：</p>
+          <input  type="text" id="时间小时"></br></br></br>
+          <p>请输入时间分钟：</p>
+          <input  type="text" id="时间分钟"><button id="button时间" onclick="buttonshijianxiaoshi()">确定</button>
+          
+    </div1>
+    
+    <div2>
+        <h1>明天您需要完成的事件有：</h1>
+        <ul id="输出">
+
+        </ul>
+        <button id="button排序" onclick="buttonpaixu()">排序</button>
+    </div2>
+  </div>
+  <script src="jquery-3.2.1.min.js"></script>
+  <script>
+  
+    shuzuxiaoshi=[];
+    shuzufenzhong=[];
+    shuzushijian=[];
+    var shuzu=[];
+    iii=0;
+    
+    function buttonshijian(){
+      x=document.getElementById("事件").value;
+     
+    }
+
+    function buttonshijianxiaoshi(){
+      y=document.getElementById("时间小时").value;
+      z=document.getElementById("时间分钟").value;
+      
+      shuzuxiaoshi.push(y);
+      
+      shuzufenzhong.push(z);
+      
+      shuzushijian.push(x);
+   
+    ul=document.getElementById("输出");
+    obj=document.createElement("li");
+
+    bt=document.createElement("button");
+    bt.onclick=function() {
+      this.parentNode.parentNode.removeChild(this.parentNode);shuzu.splice(iii,1);
+    }
+    bt.innerHTML="删除";
+obj.innerHTML=x+" "+y+":"+z;
+shuzu[iii]='<li>'+x+" "+y+":"+z+'<button onclick=" this.parentNode.parentNode.removeChild(this.parentNode);shuzu.splice(iii,1);">删除</button>'+'</li>';
+shuzu[iii].split(",");
+iii++;
+obj.appendChild(bt);
+ul.appendChild(obj);
+
+    }
+
+    function buttonpaixu(){
+     
+      document.getElementById("输出").innerHTML="";
+      for(var i=0;i<=shuzufenzhong.length;i++)
+      {
+        for(var j=i+1;j<=shuzufenzhong.length-1;j++)
+            {
+              if(parseFloat(shuzuxiaoshi[i])>parseFloat(shuzuxiaoshi[j]))
+                 {var m,m1,m2;
+                  m=shuzu[j];shuzu[j]=shuzu[i];shuzu[i]=m;
+                  m1=shuzuxiaoshi[j];shuzuxiaoshi[j]=shuzuxiaoshi[i];shuzuxiaoshi[i]=m1;
+                  m2=shuzufenzhong[j];shuzufenzhong[j]=shuzufenzhong[i];shuzufenzhong[i]=m2;
+                 }
+              else if(parseFloat(shuzuxiaoshi[i])==parseFloat(shuzuxiaoshi[j]))
+              {
+                if(parseFloat(shuzufenzhong[i])>parseFloat(shuzufenzhong[j]))
+                {
+                  var mm,mm1,mm2;
+                  mm=shuzu[j];shuzu[j]=shuzu[i];shuzu[i]=mm;
+                  mm1=shuzuxiaoshi[j];shuzuxiaoshi[j]=shuzuxiaoshi[i];shuzuxiaoshi[i]=mm1;
+                  mm2=shuzufenzhong[j];shuzufenzhong[j]=shuzufenzhong[i];shuzufenzhong[i]=mm2;
+                }
+              }
+            }
+      }
+   
+       ul.innerHTML=shuzu;
+     
+    }
+
+  </script>
+</body>
+</html>
+
