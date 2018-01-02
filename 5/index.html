@@ -1,0 +1,34 @@
+<html>
+<head>
+    <meta charset="utf-8">
+<script type="text/javascript">
+function loadXMLDoc()
+{
+var xmlhttp;
+var data="汉森";
+xmlhttp=new XMLHttpRequest();
+xmlhttp.open("POST","https://blog.zsxsoft.com/w2tmp/post.php",true);
+xmlhttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+xmlhttp.send("name="+data);
+
+
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+      alert(unescape(xmlhttp.responseText.replace(/\\u/g, '%u')));
+    }
+  }
+
+}
+</script>
+</head>
+<body>
+
+<h2>AJAX</h2>
+<button type="button" onclick="loadXMLDoc()">请求数据</button>
+
+</body>
+</html>
+
+
