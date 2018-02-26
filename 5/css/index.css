@@ -1,0 +1,43 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background:url(../img/back.jpg) repeat-y;
+}
+#div_2{
+    height:30px;
+    font-size:25px;
+    background:#7d2a2a;
+}
+#div_3{
+    position:relative;
+    bottom:60px;
+    height: 100px;
+    font-size: 45px;
+    color:gray;
+    text-decoration:none;
+    background:#3c3939;
+}
+a{
+    color:#bbbbb5;
+    text-decoration:none;
+}
+img{
+    width:180px;
+    height: 180px;
+
+}
+.gd{
+    font-size:20px;
+    margin:10px;
+    float: left;
+    position:relative;
+    left:80px;
+    width: 280px;
+
+}
+#dv{
+    width:200px;
+    position:relative;
+    top:80px;
+    left:550px;  
+}

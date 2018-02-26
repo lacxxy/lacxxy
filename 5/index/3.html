@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="../css/3.css" rel="stylesheet" type="text/css">
+    <title>管理员界面</title>
+</head>
+<body>
+    <form action="http://localhost/task/%E6%B3%A8%E5%86%8C/index/3.1.php" method="POST" enctype="multipart/form-data">
+        <div>
+        商品名称：
+        <input type="text" name="goods" id='name'/><br/>
+        商品图片：
+        <input type="file" name="myFile" id='pic'/><br/>
+        商品价格：
+        <input type="text" name="price" id='price'/><br/>
+        <input type="submit" name="submit" value="提交" id='bt'/>
+        </div>
+    </form>
+    <form action="http://localhost/task/%E6%B3%A8%E5%86%8C/index/3.2.php" method="POST" enctype="multipart/form-data">
+        <div>
+        要删除的商品名称：
+        <input type="text" name="name_dlt"/><br/>
+        <input type="submit" name="submit" value="确定删除" id='bt'/>
+        </div>
+    </form>
+</body>
+</html>
