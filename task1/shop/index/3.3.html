@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品修改</title>
+</head>
+
+<body>
+    <form action="3.3.php" method="POST" enctype="multipart/form-data">
+        <div>
+            请输入要修改的商品名称:
+            <input type="text" name="oldname"/>
+            <br/> 请输入修改后的商品信息:
+            <br/> 名称：
+            <input type="text" name="newname"/>
+            <br/> 图片：
+            <input type="file" name="newpic"/>
+            <br/> 价格:
+            <input type="text" name="newprice"/>
+            <br/>
+            <input type="submit" value="提交"/>
+        </div>
+    </form>
+</body>
+
+</html>

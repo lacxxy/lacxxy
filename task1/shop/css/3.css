@@ -1,0 +1,26 @@
+body{
+    margin:0px;
+    padding:0px;
+    background:url(../img/back.jpg) repeat-y;
+}
+#div_1{
+    position:relative;
+    bottom:60px;
+    height: 100px;
+    font-size: 45px;
+    color:gray;
+    text-decoration:none;
+    background:#3c3939;
+}
+#div_2{
+    width:300px;
+    height:300px;
+    background:#ffffff;
+    text-align:center;
+    position:relative;
+    left:37%;
+}
+a{
+    font-size:30px;
+    text-decoration:none;
+}
