@@ -1,0 +1,48 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+body{
+    background: bisque;
+    height: 100%;
+    width:100%;
+}
+#header{
+    display: flex;
+    justify-content:center;
+    background: gray;
+    height: 8%;
+    width:100%;
+    font-size:20px;
+}
+#word{
+    color:red;
+    display:flex;
+    align-items:center;
+    position:absolute;
+    left:0%;
+    top:-0.5%;
+    font-size:30px;
+}
+#app{
+    display:flex;
+}
+.text{
+    height:30px;
+    width:220px;
+}
+.fbt{
+   height:34px;
+   width:70px;
+}
+.todo{
+    font-size:20px;
+    display: flex;
+    justify-content:center;
+    position:relative;
+    top:30px;
+}
+.bt{
+    width:50px;
+    height:30px;
+}

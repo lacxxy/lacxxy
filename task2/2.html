@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="2.css">
+    <title>todolist</title>
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div id="bd">
+        <div id="header">
+            <div id="word"><p>todolist</p></div>
+            <div id="app">
+                <input type="text" v-model="sths" placeholder="enter your todo" class="text">
+                <input type="button" value="submit" @click="sbt()" class="fbt">
+            </div>
+        </div>
+        <ul>
+            <div class="tododiv">
+            <li v-for="sth in things" class="todo">{{sth.text}}
+                <input type="button" @click="del(sth)" class="bt" value="delete">
+            </li>
+            </div>
+        </ul>
+    </div>
+    <script>
+        var first = new Vue({
+            el: '#bd',
+            data: {
+                sths: '',
+                things: [],
+            },
+            methods: {
+                sbt: function () {
+                    this.things.unshift({
+                        text: this.sths
+                    })
+                    this.sths = '';
+                },
+                del: function (e) {
+                    var index = this.things.indexOf(e);
+                    this.things.splice(index, 1);
+                }
+            }
+        });  
+    </script>
+
+</body>
+
+</html>
