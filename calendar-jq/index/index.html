@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../style/index.css?v=1">
+    <script src="../js/jquery-3.3.1.js"></script>
+    <script src="../js/index.js"></script>
+    <title>canlendar</title>
+</head>
+
+<body>
+    <div class="all">
+        <div class="header">
+            <div class="name">
+                <h>一个简单的日历</h>
+            </div>
+            <div class="header-all">
+                <div class="headerdiv">
+                    <img class="thelastyear" src="../img/left.png">
+                    <input class="choose chooseyear" type="text" disabled="disabled">
+                    <img class="thenextyear" src="../img/right.png">
+                </div>
+
+                <div class="headerdiv">
+                    <img class="thelastmonth" src="../img/left.png">
+                    <input class="choose choosemonth" type="text" disabled="disabled">
+                    <img class="thenextmonth" src="../img/right.png">
+                </div>
+
+                <div class="headerdiv">
+                    <button class="returntoday">返回今天</button>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <table>
+                <tr>
+                    <td>星期日</td>
+                    <td>星期一</td>
+                    <td>星期二</td>
+                    <td>星期三</td>
+                    <td>星期四</td>
+                    <td>星期五</td>
+                    <td>星期六</td>
+                </tr>
+                <tr class="row">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="row">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="row">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="row">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="row">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <div class="right">
+                <div class="right-header"></div>
+            <hr/>
+                <div>
+                    <div class="right-day"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    document.ready(judge(), onload(today),first(), thenextyear(), thelastyear(), thenextmonth(), thelastmonth(), returntoday(), clickday(), showday(year, month, day),
+    slide()
+    );
+</script>
+
+</html>

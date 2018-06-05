@@ -1,0 +1,133 @@
+*{
+    margin: 0px;
+    padding:0px;
+    border: 0px;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    color: white;
+    background: url(../img/1.jpg) ;
+    background-size: 100% 100%;
+}
+.all{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.name{
+    width: 60%;
+    height: 40px;
+    color: rgb(239, 68, 119);
+    border: 1px solid rgb(239, 68, 119);
+    font-size: 25px;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main{
+    position: relative;
+    top:100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header{
+    position: relative;
+    top:100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header-all{
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: rgb(239, 68, 119);
+}
+.headerdiv{
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.returntoday{
+    background: black;
+    color: rgb(239, 68, 119);
+    text-align: center;
+    min-height: 25px;
+    line-height: 25px;
+    width: 40%;
+}
+table{
+    width: 40%;
+    height: 365px;
+    border-collapse: collapse;
+    background: rgb(36, 36, 36);
+}
+.header img{
+    widows: 30px;
+    height: 30px;    
+    background: rgb(239, 68, 119);
+}
+td,tr{
+    border: 1px solid rgb(239, 68, 119);
+    width: 14.2%;
+    height: 60px;
+    text-align: center;
+}
+.choose{
+    width: 80px;
+    height: 20px;
+    text-align: center;
+    background: black;
+    color:rgb(239, 68, 119);
+}
+.right{
+    font-size: 20px;
+    width:20%;
+    height: 365px;
+    color:rgb(239, 68, 119);
+    background: rgb(0, 0, 0);
+    text-align: center;
+}
+.right-day{
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:10px;
+    background: rgb(239, 68, 119);
+    width: 40%;
+    height: 120px;
+    font-size:70px;
+}
+hr{
+    height: 1px;
+    background:rgb(239, 68, 119);
+}
+@media screen and (max-width:1000px){
+   .name{
+       width: 100%;
+   }
+   .header-all{
+       width:100%;
+   }
+   table{
+       width:60%;
+   }
+   .right{
+       width:40%;
+   }
+   .right-day{
+       width:80%;
+   }
+   .headerdiv{
+       margin-right: 10px;
+   }
+   .returntoday{
+       width:100%;
+   }
+}
